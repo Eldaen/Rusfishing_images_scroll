@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2, // Начиная с Chrome 18 ставим 2, иначе 1 (не поддерживается такое старьё)
+  "name": "Rusfishing hotkeys scroll", // Название расширения
+  "short_name": "fish scroll",
+  "version": "1.0", // Версия расширения
+
+  "permissions": [
+    "tabs", "http://*/*" // Доступ к объекту Tabs
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [ "http://www.rusfishing.ru/*" ],
+      "js": [ "background.js" ]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "main.js"
+  ]
+}
